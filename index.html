@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +6,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: linear-gradient(to right, #2f80ed, #56ccf2); color: white; padding: 60px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin: 10px 0; font-size: 1.2rem; }
-    nav { text-align: center; margin: 20px 0; }
-    nav a { margin: 0 15px; text-decoration: none; color: #2f80ed; font-weight: bold; }
-    .photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 20px auto; display: block; border: 4px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .section { max-width: 800px; margin: auto; padding: 20px; }
-    .btn { background: #2f80ed; color: white; padding: 10px 20px; border: none; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+   header {
+  background: linear-gradient(90deg, #f9d423, #ff4e50, #24c6dc);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: fadeInHeader 1.2s ease-in-out;
+  background-size: 400% 400%;
+  animation: animatedGradient 10s ease infinite;
+}
+
+    
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      animation: fadeDown 1.2s ease-in-out;
+    }
+
+    header p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      animation: fadeUp 1.4s ease-in-out;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2f80ed;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff8c42;
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .btn {
+      background: #ff7e5f;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background: #feb47b;
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInHeader {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
   </style>
 </head>
 <body>
