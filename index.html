@@ -112,24 +112,64 @@
       text-align: center;
     }
 
-    nav input {
-      padding: 10px;
-      width: 80%;
-      max-width: 400px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2f80ed;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    main {
-      padding: 20px;
-      padding-top: 40px;
+    nav a:hover {
+      color: #ff8c42;
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      background: #ff7e5f;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background: #feb47b;
+      transform: translateY(-3px);
+    }
+
+    .certified {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fff;
     }
 
     .certified h2 {
-      text-align: center;
+      font-size: 2rem;
       color: #FF6F61;
-      margin-bottom: 30px;
-      font-size: 2em;
+      margin-bottom: 25px;
     }
 
     .carousel {
@@ -191,7 +231,7 @@
       .nav-links a { padding: 10px 15px; text-align: left; border-top: 1px solid rgba(255,255,255,0.2); font-size: 15px; }
       .nav-links .home-btn { background: #FFD700; color: #FF6F61; margin: 5px 10px; }
       header h1 { font-size: 2rem; }
-      nav input { width: 90%; font-size: 1rem; }
+      nav a { display: block; margin: 10px 0; }
       .carousel img { height: auto; max-height: 300px; }
     }
   </style>
@@ -212,22 +252,30 @@
   </div>
 
   <header>
+    <img src="assets/sidharth.png" alt="Sidharth" class="photo">
     <h1>Sidharth Jain</h1>
-    <p>Freelance Project Coordinator | Excel | SAP | JIRA | Resource Management</p>
+    <p>Freelance Project Coordinator | Excel, SAP, JIRA, Resource Management Specialist</p>
+    <a href="assets/sidharth_Jain.pdf" class="btn" download>📄 Download Resume</a>
   </header>
 
-  <main>
-    <section class="certified">
-      <h2>Certified</h2>
-      <div class="carousel">
-        <div class="carousel-track" id="carouselTrack">
-          <img src="assets/PL300.png" alt="Certificate 1">
-          <img src="assets/CLIENT VALUE CREATIONS.jpeg" alt="Certificate 2">
-          <img src="assets/project management.png" alt="Certificate 3">
-        </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Certified Section -->
+  <section class="certified">
+    <h2>Certified</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="assets/PL300.png" alt="Certificate 1">
+        <img src="assets/CLIENT VALUE CREATIONS.jpeg" alt="Certificate 2">
+        <img src="assets/project management.png" alt="Certificate 3">
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
     <p>Connect with me:</p>
@@ -248,14 +296,6 @@
     function slide() {
       index++;
       if (index >= track.children.length) index = 0;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-    setInterval(slide, 3000);
-
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-  </script>
-
-</body>
-</html>
+      track.style.transform = `translateX(-${
+::contentReference[oaicite:0]{index=0}
+ 
