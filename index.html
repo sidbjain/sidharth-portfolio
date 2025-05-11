@@ -14,19 +14,15 @@
       color: #333;
     }
 
-   header {
-  background: linear-gradient(90deg, #f9d423, #ff4e50, #24c6dc);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  animation: fadeInHeader 1.2s ease-in-out;
-  background-size: 400% 400%;
-  animation: animatedGradient 10s ease infinite;
-}
-
-    
+    header {
+      background: linear-gradient(90deg, #f9d423, #ff4e50, #24c6dc);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-size: 400% 400%;
+      animation: animatedGradient 10s ease infinite;
+    }
 
     header h1 {
       margin: 0;
@@ -73,12 +69,6 @@
       transform: scale(1.05);
     }
 
-    .section {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-
     .btn {
       background: #ff7e5f;
       color: white;
@@ -99,6 +89,49 @@
       transform: translateY(-3px);
     }
 
+    /* Certified Slider */
+    .certified-slider {
+      background: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .certified-slider h2 {
+      font-size: 2rem;
+      color: #2f80ed;
+      margin-bottom: 25px;
+    }
+
+    .slider-container {
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slideOneByOne 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+      transition: transform 0.5s;
+      border-radius: 12px;
+    }
+
+    @keyframes slideOneByOne {
+      0%, 20% { transform: translateX(0%); }
+      33.33%, 53.33% { transform: translateX(-100%); }
+      66.66%, 86.66% { transform: translateX(-200%); }
+      100% { transform: translateX(0%); }
+    }
+
     @keyframes fadeDown {
       from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -109,16 +142,11 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    @keyframes fadeInHeader {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
     @keyframes animatedGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
   </style>
 </head>
 <body>
@@ -130,12 +158,22 @@
   </header>
 
   <nav>
-  <!--  <a href="index.html">Home</a> -->
+    <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
-    
+    <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Certified Section -->
+  <section class="certified-slider">
+    <h2>Certified</h2>
+    <div class="slider-container">
+      <div class="slides">
+        <img src="https://via.placeholder.com/400x250?text=Certificate+1" alt="Cert 1">
+        <img src="https://via.placeholder.com/400x250?text=Certificate+2" alt="Cert 2">
+        <img src="https://via.placeholder.com/400x250?text=Certificate+3" alt="Cert 3">
+      </div>
+    </div>
+  </section>
 </body>
 </html>
