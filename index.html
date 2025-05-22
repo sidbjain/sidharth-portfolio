@@ -145,6 +145,68 @@
         max-width: 90%;
       }
     }
+
+    .testimonial-section {
+  padding: 60px 5%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.testimonial-footer img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.user-info {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.stars {
+  color: #fbc02d;
+  margin-bottom: 2px;
+}
+
   </style>
 </head>
 <body>
@@ -174,6 +236,25 @@
       </div>
     </div>
   </section>
+
+  <section class="testimonial-section" id="testimonials">
+  <h2>Testimonial</h2>
+  <div class="testimonial-grid">
+    <!-- Repeat this card for each testimonial -->
+    <div class="testimonial-card">
+      <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+      <div class="testimonial-footer">
+        <img src="images/user.jpg" alt="Gemma Nolen" />
+        <div class="user-info">
+          <div class="stars">★★★★★</div>
+          <p><strong>Gemma Nolen</strong><br><span>Google</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- You can duplicate this card as needed -->
+  </div>
+</section>
+
 
   <script>
     const track = document.getElementById('carouselTrack');
